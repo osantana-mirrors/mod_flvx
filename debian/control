@@ -1,0 +1,16 @@
+Source: mod-flvx
+Section: python
+Priority: optional
+Maintainer: Osvaldo Santana Neto <osantana@triveos.com>
+Uploaders: Osvaldo Santana Neto <osantana@triveos.com>
+Build-Depends: debhelper (>= 5), apache2-threaded-dev, dpatch
+Homepage: http://people.apache.org/~pquerna/modules/mod_flvx.c
+Standards-Version: 3.8.1
+
+Package: libapache2-mod-flvx
+Architecture: any
+Depends: apache2, apache2.2-common, ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Suggests: apache2-mpm-worker | apache2-mpm-event
+Description: FLV pseudo-stream module for Apache
+ The mod_flvx is a module that enables Apache to serve videos using
+ a pseudo-stream mode. This mode requires a compliant Flash Player.

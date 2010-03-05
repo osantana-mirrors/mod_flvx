@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+apache_force_reload() {
+    if apache2ctl configtest 2>/dev/null; then
+        invoke-rc.d apache2 force-reload || true
+    else
+        echo "Your apache2 configuration is broken, please fix it and restart apache2 manually."
+    fi
+}
+
+if [ -z "$2" ]; then
+    if [ -e /etc/apache2/apache2.conf ]; then
+        a2enmod flvx >/dev/null || true
+        apache_force_reload
+    fi
+else
+    #we're upgrading
+    if [ -e /etc/apache2/mods-enabled/flvx.load ]; then
+        apache_force_reload
+    fi
+fi
+
+#DEBHELPER#
+
+exit 0

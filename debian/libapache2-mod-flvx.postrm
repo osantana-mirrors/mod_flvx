@@ -1,0 +1,15 @@
+#! /bin/sh
+set -e
+
+if [ "$1" = "purge" -o "$1" = "remove" ]; then
+    # remove pseudo conffile
+    test -e /etc/apache2/mods-available/flvx.load && rm -f /etc/apache2/mods-available/flvx.load
+fi
+if [ "$1" = "purge" -a -e /etc/apache2/mods-available/flvx.conf ]; then
+    # remove conffile
+    rm -f /etc/apache2/mods-available/flvx.conf
+fi
+
+#DEBHELPER#
+
+exit 0

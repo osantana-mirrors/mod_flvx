@@ -1,0 +1,6 @@
+mod-flvx (0.0.1-1) unstable; urgency=low
+
+  * Initial release (upstream version)
+  * Tune Patches from Artur Bodera (artur@bodera.com)
+
+ -- Osvaldo Santana Neto <osantana@triveos.com>  Fri, 5 Mar 2010 10:28:00 -0300
