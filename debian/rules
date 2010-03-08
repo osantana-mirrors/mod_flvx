@@ -20,7 +20,7 @@ build: patch build-stamp
 clean: unpatch
 	dh_testdir
 	dh_testroot
-	rm -rf build-stamp mod_flvx.{lo,la,slo} .libs
+	rm -rf build-stamp mod_flvx.lo mod_flvx.la mod_flvx.slo .libs
 	dh_clean 
 
 install-clean:
