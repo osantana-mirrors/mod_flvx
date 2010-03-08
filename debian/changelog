@@ -1,4 +1,4 @@
-mod-flvx (0.0.1-1) unstable; urgency=low
+mod-flvx (0.0-1) unstable; urgency=low
 
   * Initial release (upstream version)
   * Tune Patches from Artur Bodera (artur@bodera.com)
