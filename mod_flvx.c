@@ -24,7 +24,7 @@
 
 #define FLVX_HANDLER "flv-stream"
 
-#define FLVX_HEADER "FLV\x1\x1\0\0\0\x9\0\0\0\x9"
+#define FLVX_HEADER "FLV\x1\x5\0\0\0\x9\0\0\0\0"
 #define FLVX_HEADER_LEN (sizeof(FLVX_HEADER)-1)
 
 static apr_off_t get_start(request_rec *r)
@@ -84,6 +84,7 @@ static int drive_flvx(request_rec *r)
     bb = apr_brigade_create(r->pool, r->connection->bucket_alloc);
 
     if (offset != 0) {
+        length += FLVX_HEADER_LEN;
         rv = apr_brigade_write(bb, NULL, NULL, FLVX_HEADER, FLVX_HEADER_LEN);
         if (rv) {
             ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r,
