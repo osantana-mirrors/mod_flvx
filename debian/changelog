@@ -1,4 +1,13 @@
-mod-flvx (0.0-1) unstable; urgency=low
+mod-flvx (0.0-2) unstable; urgency=low
+
+  * Added the following contributions from Marc Noirot (marc.noirot@gmail.com)
+  * Fixed FLV header metadata (http://github.com/noirotm/mod_flvx/commit/e4df4a)
+  * Fixed a content-length that must take generated header into account
+  * Added a README file describin how to build and configure this module
+  * Maintaining upstream version. We won't need the debian/patches anymore
+  * Removing trailing whitespaces from files
+
+ -- Osvaldo Santana Neto <osantana@triveos.com>  Sun, 23 May 2010 15:38:00 -0300mod-flvx (0.0-1) unstable; urgency=low
 
   * Initial release (upstream version)
   * Tune Patches from Artur Bodera (artur@bodera.com)

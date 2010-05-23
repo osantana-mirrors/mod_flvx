@@ -6,22 +6,19 @@ PACKAGE=libapache2-mod-flvx
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-# we need dpatch
-include /usr/share/dpatch/dpatch.make
-
 APXS2=/usr/bin/apxs2
 
 build-stamp:
 	$(APXS2) -c mod_flvx.c
 	touch $@
 
-build: patch build-stamp
+build: build-stamp
 
-clean: unpatch
+clean:
 	dh_testdir
 	dh_testroot
 	rm -rf build-stamp mod_flvx.lo mod_flvx.la mod_flvx.slo .libs
-	dh_clean 
+	dh_clean
 
 install-clean:
 	dh_testdir
@@ -42,7 +39,7 @@ binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs 
+	dh_installchangelogs
 	dh_installdocs
 	dh_install
 	dh_installman
@@ -57,4 +54,4 @@ binary-arch: build install
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install
-.PHONY: clean-patched patch unpatch
+
