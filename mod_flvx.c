@@ -14,13 +14,13 @@
  *  limitations under the License.
  *
  *
- *  Modified on 4.II.2008 by Artur Bodera (artur@bodera.com)
+ *  Modified on 4.II.2008 by Artur Bodera (artur•bodera˛com)
  *      - added offset reset if invalid
  *      - fixed content-length header generation
  *      - added last-modified header
  *      - inspiration: http://apachedev.ru/2006/07/13/mod_flvx-peredacha-potokovogo-flash-video
  *
- * Modified on 2010-05-23 by Marc Noirot (marc.noirot@gmail.com)
+ * Modified on 2010-05-23 by Marc Noirot (marc˛noirot•gmail˛com)
  *      - fixed FLVX_HEADER to be spec compliant
  *      - fixed a content-length that must take generated header into account
  *      - added a README file with build and configuration instructions
@@ -109,7 +109,7 @@ static int drive_flvx(request_rec *r)
     else {
         length = fi.size;
 
-        /* Offset should be reset if invalid            (mod by Artur Bodera (artur@bodera.com) */
+        /* Offset should be reset if invalid mod by Artur Bodera */
         offset = 0;
     }
 
@@ -129,7 +129,7 @@ static int drive_flvx(request_rec *r)
 
     ap_set_content_type(r, "video/x-flv");
 
-    /* Add last-modified headers                        (mod by Artur Bodera (artur@bodera.com) */
+    /* Add last-modified headers mod by Artur Bodera */
     ap_update_mtime(r, r->finfo.mtime);
     ap_set_last_modified(r);
 

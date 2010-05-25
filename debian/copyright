@@ -1,15 +1,15 @@
-This package was debianized by Osvaldo Santana Neto <osantana@triveos.com> on
+This package was debianized by Osvaldo Santana Neto <osantana•triveos˛com> on
 Fri, 5 Jul 2010 10:46:00 -0300.
 
-Based on mod_wsgi package by Bernd Zeimetz <bernd@bzed.de>.
-Fixes and contributions from Marc Noirot <marc.noirot@gmail.com>.
+Based on mod_wsgi package by Bernd Zeimetz <bernd•bzed.de>.
+Fixes and contributions from Marc Noirot <marc˛noirot•gmail˛com>.
 
 It was downloaded from http://people.apache.org/~pquerna/modules/mod_flvx.c
 
 Upstream Author:
 
-    Paul Querna <pquerna@apache.org>
-    Artur Bodera <artur@bodera.com> (Tune patches)
+    Paul Querna <pquerna•apache.org>
+    Artur Bodera <artur•bodera˛com> (Tune patches)
 
 Copyright:
 
@@ -32,5 +32,5 @@ License:
 On Debian systems the full text of the Apache License, Version 2,
 can be found in `/usr/share/common-licenses/Apache-2.0'.
 
-The Debian packaging is © 010 Osvaldo Santana Neto <osantana@triveos.com> and
+The Debian packaging is © 010 Osvaldo Santana Neto <osantana•triveos˛com> and
 is licensed under the Apache License, Version 2.0, see below.
