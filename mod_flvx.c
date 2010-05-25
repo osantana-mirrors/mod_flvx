@@ -128,6 +128,7 @@ static int drive_flvx(request_rec *r)
     apr_brigade_insert_file(bb, fp, offset, length, r->pool);
 
     ap_set_content_type(r, "video/x-flv");
+    ap_set_content_length(r, length);
 
     /* Add last-modified headers mod by Artur Bodera */
     ap_update_mtime(r, r->finfo.mtime);
