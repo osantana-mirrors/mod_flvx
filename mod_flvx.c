@@ -129,9 +129,6 @@ static int drive_flvx(request_rec *r)
 
     ap_set_content_type(r, "video/x-flv");
 
-    /* Content length should include FLV header         (mod by Artur Bodera (artur@bodera.com) */
-    ap_set_content_length(r, length + FLVX_HEADER_LEN);
-
     /* Add last-modified headers                        (mod by Artur Bodera (artur@bodera.com) */
     ap_update_mtime(r, r->finfo.mtime);
     ap_set_last_modified(r);
