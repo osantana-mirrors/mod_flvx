@@ -1,7 +1,7 @@
 mod_flvx
 ========
 
-*Warning:* I'm not maitaining this module anymore. I'm using nginx's native [ngx_http_mp4_module](http://nginx.org/en/docs/http/ngx_http_mp4_module.html) instead.
+*Warning:* I'm not maintaining this module anymore. I'm using nginx's native [ngx_http_mp4_module](http://nginx.org/en/docs/http/ngx_http_mp4_module.html) instead.
 
 FLV Progressive download streaming for Apache 2
 -----------------------------------------------
